@@ -1,10 +1,26 @@
-import { View, Text } from 'react-native';
+import { View, ScrollView, SafeAreaView, Text, TouchableOpacity } from 'react-native';
+import { useState } from 'react';
+import { Stack, useRouter } from 'expo-router';
+import HamburgerIcon from '../components/HamburgerIcon';
 
 const Home = () => {
+
+    const router = useRouter();
+
     return (
-        <View>
-            <Text>Home</Text>
-        </View>
+        <SafeAreaView style={{
+            flex: 1,
+            backgroundColor: 'lightblue'
+        }}>
+            <Stack.Screen
+                options={{
+                    headerShadowVisible: false,
+                    headerLeft: () => (
+                        <HamburgerIcon />
+                    )
+                }}
+            /> 
+        </SafeAreaView>
     )
 }
 
