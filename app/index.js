@@ -2,6 +2,7 @@ import { View, ScrollView, SafeAreaView, Text, TouchableOpacity } from 'react-na
 import { useState } from 'react';
 import { Stack, useRouter } from 'expo-router';
 import HamburgerIcon from '../components/HamburgerIcon';
+import Login from '../components/Login/Login';
 
 const Home = () => {
 
@@ -20,6 +21,7 @@ const Home = () => {
                     )
                 }}
             /> 
+            <Login />
         </SafeAreaView>
     )
 }
